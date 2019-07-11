@@ -1,0 +1,201 @@
+/* GENERAL CSS */
+html,body {min-height: 100vh; font-family: 'Libre Baskerville'}
+h1,h2,h3,h4,h5,h6 {font-family: 'Libre Baskerville', sans-serif; font-weight: 100; margin: 0; padding: 0;}
+p,li,a,label,span,tr {font-family: 'Libre Baskerville', sans-serif; font-weight: 300; margin: 0; padding: 0;}
+form input, form select {font-family: 'Libre Baskerville', sans-serif; font-weight: 300; font-size: 1em;}
+form input[type="text"], form input[type="password"], form input[type="number"] {border-style: none; border-bottom-style: solid; border-bottom-color: #000; border-bottom-width: 1px; margin-left: 0.2em; margin-right: 0.2em; padding-bottom:0.2em; padding-top: 0.2em; margin: 0.5em;}
+select, input[type="date"], input[type="file"] {padding-bottom:0.2em; padding-top: 0.2em; margin: 0.5em; border-style: none}
+body {display: flex; flex-direction: column; width: 100%; margin: 0; padding: 0;}
+main {clear:left; background-color: #FFF; display: flex; justify-content: center;}
+
+ul {-webkit-margin-before: 0px; -webkit-margin-after: 0px; -webkit-margin-start: 0px; -webkit-margin-end: 0px; -webkit-padding-start: 0px;}
+
+a {text-decoration: none; color: black;}
+a:hover {text-decoration: none; font-weight: 500; color: #37086e;}
+
+footer {height: 1.7em; background-color: #AAA; position: fixed; bottom: 0; width: 100%; display:flex; align-items: center; padding-left: 5px;}
+
+form {display: flex; flex-direction: column;}
+form span {flex-direction: row}
+form span label {display:inline-block; text-align: right; width:300px;}
+input[type="submit"] {cursor: pointer; background: #FFF; border-style: none; padding: 0.5em; clear:both; float: left;}
+
+.width80 {display: flex; justify-content: left; flex-direction: column; width: 80vw; min-height: 84vh; box-shadow: 0px 0px 10px; padding: 2em; padding-top: 123px; background-color: #FFF;}
+.body {display:flex; justify-content: center; margin-top: -120px; padding-top:1em; background-color: #e8fcfc;}
+.column {display: flex; flex-direction: column;}
+.right-border {padding-right:20px; border-right-width: 2px; border-right-color: black; border-right-style: solid; margin-right: 20px; width: 25%;}
+.row {display: flex; flex-direction: row; height:100%; align-items: center;}
+
+input[type="submit"]:hover{background-color: #37086e; color: #FFF;}
+
+.display-none {display: none !important;}
+
+/*  TOOLTIP CSS */
+/* https://www.w3schools.com/css/css_tooltip.asp */
+/* Tooltip container */
+.tooltip {position: relative; display: inline-block; border-bottom: 1px dotted black;}
+
+/* Tooltip text */
+.tooltip .tooltiptext {visibility: hidden; width: 160px; background-color: black; color: #fff; text-align: center; padding: 5px 5px; border-radius: 6px;}
+/* Position the tooltip text - see examples below! */
+.tooltip .tooltiptext {position: absolute; z-index: 1; width: 160px; top: 100%; left: 50%; margin-left: -80px;}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {visibility: visible;}
+
+
+/* HEADER CSS */
+/* TOP NAVIGATION BAR DISPLAYED ON EVERY PAGE */
+.header {display:flex; flex-direction: row; width: 100%; box-shadow: 0px 0px 10px; position: fixed; top: 0; background-color: white; z-index:99}
+.header-img {display: flex; justify-content: center; background-position: center; background-size: auto 90%; background-repeat: no-repeat; align-items: center; width: 160px; height: 100%; margin-left: 20px;} /* LOGO */
+.header-img img {width:100%;}
+.header-left {float: left;}
+.header-right {display: flex; flex-direction: row; float: right;}
+.header-info {width:100%;} /* EVERYTHING NOT LOGO */
+.nav-top {display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-end; padding-bottom: 0.55em; margin-top: 0.6em; padding-left: 0.5em;} /* BLACK BAR UNDERNEATH NAME */
+.user {display: flex; padding-right: 1em; flex-direction: row; text-align: right; padding-left: 4em; align-items: center;} /* USER DETAILS */
+.user a {padding-left: 0.5em;}
+
+
+
+.nav-links {list-style-type: none; display: flex; margin: 0; padding: 0; justify-content: center;} /* HOTLINKS BETWEEN PAGES */
+.nav-button {float:left; width: 25%; min-width:90px; cursor: pointer; text-align: center; padding-top: 0.9em; padding-bottom:1em;} /* EACH LINK */
+
+.nav-links li:hover {font-weight: 500; color: #37086e;} /* CHANGE BACKGROUND COLOUR ON HOVER */
+
+.nav-links ul {overflow: hidden; position: absolute; display: block; background-color: #333; width: 25%; margin-top: 16px; max-height: 0px; -webkit-transition: max-height 0.5s; transition: max-height 1s; padding-left: 0;}
+.nav-links li:hover ul {max-height: 500px;}
+.nav-links ul li {float: none; width: auto; color: white; padding-top: 10px; padding-bottom:10px; display: block; text-decoration: none;}
+.nav-links ul li:hover {background-color: #37086e; font-weight: 500; color: #fff;}
+
+.search {flex-direction: row; height:100%; align-items: center; justify-content: flex-end; display:flex;}
+.search input[type="text"] {border-width: 0; border-bottom-width: 2px; border-bottom-color: #000; border-bottom-style: solid;}
+.search input[type="submit"] {background-color: #fff; border: none; clear: both; text-align: center; font-family: 'Libre Baskerville', sans-serif; font-weight: 300; font-size: 1em; padding: 0; padding-left: 0.4em; padding-right: 0.4em; width: auto; cursor: pointer;}
+.search input[type="submit"]:hover {color: #37086e; font-weight: 500;}
+.search label {padding-left: 0.4em; padding-right: 0.4em;}
+
+
+/* HOMEPAGE CSS */
+.dashboard-row {display: flex; flex-direction: row;}
+.dashboard-column {display: flex; flex-direction: column;}
+.dashboard-content {height: 20em; width: 20em; margin: 1em; padding: 0.5em; box-shadow: 0px 0px 10px; background-color: #FFF} /*border: 2px black solid;}*/
+.details {height:16.5em; padding:0.2em; border-bottom-color: black; border-bottom-style: solid; border-bottom-width: 2px; margin-bottom: 0.5em;}
+.details h3 {margin-bottom:0.2em;}
+
+.dashboard-content button {width: 100%; height: 3em; cursor: pointer; text-align: center; margin-top:auto; background-color: #fff; border: none;}/* border-top-color: black; border-top-style: solid; border-top-width: 2px;} */
+.dashboard-content button:hover {background-color: #c0e4f2}
+
+.bottom-border {border-bottom: 2px solid black;}
+.home-table {border-spacing: 0; margin-top:1em; width:100%; height: 80%; display:block; overflow-x:auto;}
+.home-table td {margin:0; padding-top:0.5em; padding-bottom:0.5em;}
+
+
+#account img {height: 145px; margin-bottom: 5px; display: block; margin-left: auto; margin-right: auto;}
+
+
+.scrolling-img {display: flex; justify-content: center;}
+
+.wrap2 {float: left; height: 350px; margin-bottom: 20px; width:100%}
+.group input {display: none; left: -100%; position: absolute; top: -25%;}
+.group input ~ .content {display: none; height: 350px; position: relative;}
+.group input:checked ~ .content {display: flex; overflow: hidden;}
+.group input:checked ~ .previous, .group input:checked ~ .next {display: block;}
+.group label {display: none; height: 50px; width: 50px;}
+
+.content img {left: 0; margin: 0 auto; position: absolute; right: 0; z-index: 1; top: -50%; width:100%;}
+
+.next, .previous {font-size: 4em; margin: 125px 0 0 0; color: #000; cursor: pointer;}
+.previous {float: left; padding: 0 0 30px 5px;}
+.next {float: right; padding: 0 5px 30px 0; text-align: right;}
+.previous:hover, .next:hover {color:#37086e}
+
+@media screen and (min-width: 820px) {
+  .homepage-info {justify-content: left; display: flex; flex-direction: row; margin-top:10px;}
+  .sidebar {width: 15%; min-height: 1px; border-right-style: solid; border-right-width: 2px; border-right-color: black; display: flex; flex-direction: column;}
+  .main-text {text-align: left; width:78%; margin-left: 2%;}
+  .card-row {display: flex; flex-direction: row; height:100%; align-items: center;}
+  .card, .art-card, .auction-card, .auction-lot-card {width:28%;}
+  .card {height: 650px;}
+  .card-content {height: 320px;}
+  .art-card {height:500px;}
+  .art-card-content {height: 200px;}
+  .auction-card {height: 450px;}
+  .auction-lot-card {height: 400px;}
+  .auction-card-content {height: 120px;}
+  .auction-lot-card-content {height:100px}
+  .hide-search {display: flex !important;}
+}
+@media screen and (max-width: 820px) {
+  .homepage-info {justify-content: left; display: flex; flex-direction: column; margin-top:10px;}
+  .sidebar {width: 100%; min-height: 1px; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: black; display: flex; flex-direction: column;}
+  .main-text {text-align: left; width:100%;}
+  .card-row {display: flex; flex-direction: column; height:100%; align-items: center;}
+  .card, .art-card, .auction-card, .auction-lot-card {width:100%;}
+  .card {height: 550px;}
+  .card-content {height: 220px;}
+  .auction-card, .art-card {height:450px;}
+  .auction-card-content, .art-card-content {height: 100px;}
+  .auction-lot-card-content {height:100px}
+  .auction-lot-card {height: 450px;}
+  .hide-search {display: none !important;}
+}
+.sidebar a {margin-top: 0.2em; margin-bottom: 0.2em;}
+
+
+
+
+.button-float {width: 100%;}
+.button-float input[type="submit"] {width: 100%; padding: 0.6em; margin-top: 0.2em; margin-bottom: 0.2em; background-color: #FFF; border: none; font-size: 1em;}
+.button-float input[type="submit"]:hover {background-color: #37086e; color: #FFF; cursor: pointer;}
+
+/* CARD CSS */
+.card-img-container {width: 100%; margin: auto;}
+.card-img {display: block; max-width: 100%; max-height: 300px; height: auto; margin: auto;}
+.card-content, .art-card-content, .auction-card-content, .auction-lot-card-content {width: 100%;}
+.card, .art-card, .auction-card, .auction-lot-card {display: flex; align-items: center; flex-direction: column; margin: 10px; border-style: none; border-top-style: solid; border-bottom-style: solid; border-top-width: 1px; border-bottom-width: 1px; /*box-shadow: 0 0 10px;*/ padding:10px;}
+.art-card:hover {color: #37086e; font-weight: 400; border-top-color: #37086e; border-bottom-color: #37086e; /*border-top-width: 2px; border-bottom-width: 2px;*/ border-style: solid; border-width: 2px;}
+.card-more {margin-top: 5px; margin-bottom:-10px; align-self: flex-end;}
+.card-more, .card-more button {width: 100%; height: 3em; cursor: pointer; text-align: center; background-color: #fff; border: none; padding: 0;}
+.card-more {border-top-color: black; border-top-style: solid; border-top-width: 1px; padding-bottom: 10px;}
+.card-more button {font-size: 1em; margin-top: 5px; margin-bottom: 5px;}
+.card-more button:hover, .card:hover .card-more button, .art-card:hover .card-more button {background-color: #37086e; color: #FFF;}
+.card:hover, .art-selected {border-color: #37086e !important; border-style: solid !important; border-width: 2px !important;}
+.card-content p {margin: 0.2em;}
+
+/* LOGIN CSS */
+.login {display: flex; justify-content: center; align-items: center; min-height: 100vh;}
+.login-container {display: flex; flex-direction: column; justify-content: center; align-items: center; width:30em; height:25.5em; box-shadow: 0 0 10px; border-radius: 10px; margin-top:-5em; background-color: #FFF}
+.login-form {margin-top:0.5em; margin-bottom:0; flex-direction: column; display: flex; align-items: flex-end; margin-left: 0.3em}
+.login-container img {display: block; margin-left: auto; margin-right: auto; width:80%; margin-bottom:0.5em}
+.login-form input {width: 220px;}
+.login-form input[type="text"], .login-form input[type="password"] {border-width: 0; border-bottom-width: 2px; border-bottom-color: #000; border-bottom-style: solid; margin-top: 0.2em; margin-bottom: 0.4em;}
+.login-form input[type="submit"] {background-color: #FFF; border: none; clear: both; width: 100%; text-align: center; font-family: 'Libre Baskerville', sans-serif; font-weight: 300; font-size: 1em; padding: 0.3em;}
+.login-form input[type="submit"]:hover {background-color: #37086e; color: #FFF}
+
+.input-form {
+
+}
+
+.login-popup p {cursor: pointer;}
+.login-popup:hover p {color: #37086e;}
+.login-popup-form {display: none; text-align: left; top: 0; position: absolute; background-color: white; z-index:100; padding: 0.4em; box-shadow: 0px 0px 10px; margin-top: 0.6em; right: 0; margin-right: 1em; margin-top: 3.2em;}
+.login-popup-form-show {display: flex;}
+
+/* AUCTION LOT */
+.auction-image-container {height:200px; width: 100%; overflow: hidden;}
+.auction-image {width:100%; margin-top: -25%}
+.lot-view-button {background-color: #FFF; border-style: none; font-size: 1em; width: 100%; padding: 0.6em; cursor: pointer;}
+.art-card:hover .lot-view-button, .card:hover .lot-view-button, .lot-view-button:hover {background-color: #37086e; color: #FFF;}
+
+/* ART ITEM */
+.art-item-image-container {width: 40%; height:100%; margin-right: 10px;}
+.art-item-image {max-height:25%; max-width: 25%;}
+.art-item-image-main {max-width: 100%; max-height: 75%;}
+
+/*enlarge image*/
+.art-item-image-main, .art-item-image {transition: all .2s ease-in-out;}
+.art-item-image-main:hover {transform: scale(1.05);}
+.art-item-image:hover {transform: scale(1.1);}
+
+.admin-header {cursor: pointer}
+.admin-header:hover {color: #37086e}
